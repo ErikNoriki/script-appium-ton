@@ -1,0 +1,42 @@
+Cenário: Realizar cadastro de uma conta Pessoa Física
+Dado que o usuário esteja na tela inicial do aplicativo
+Quando clicar em "Criar Conta"
+E selecionar "Não sou cliente"
+E o usuário clicar em "Para você"
+E aceitar os termos de uso
+E preencher o CPF, nome completo, data de nascimento
+E preencher o celular e e-mail
+E preencher nome completo da mãe e ramo
+E preencher o endereço
+E preencher os demais campos obrigatórios
+Então o usuário é cadastrado com sucesso
+
+Cenário: Realizar Login
+Dado que o usuário esteja na tela inicial do aplicativo
+Quando clicar em "Entrar"
+E preencher um e-mail com conta criada
+E preencher uma senha com credencial correta
+Então o usuário realiza login com sucesso
+E é redirecionado a home do aplicativo
+
+Cenário: Validar campos obrigatórios - Passo 1 do Cadastro
+Dado que o usuário esteja na tela inicial do aplicativo
+Quando clicar em "Criar Conta"
+E selecionar "Não sou cliente"
+E o usuário clicar em "Para você"
+E aceitar os termos de uso
+E na tela de cadastro não inserir os dados nos campos
+E clicar em "Continuar"
+Então é exibida a mensagem "Campo Obrigatório", abaixo de cada campo na tela
+
+Cenário: Validar CPF válido - Passo 1 do Cadastro
+Dado que o usuário esteja na tela inicial do aplicativo
+Quando clicar em "Criar Conta"
+E selecionar "Não sou cliente"
+E o usuário clicar em "Para você"
+E aceitar os termos de uso
+E na tela de cadastro inserir um CPF inválido
+E preencher corretamente os outros campos
+E clicar em "Continuar"
+Então é exibida a mensagem "CPF inválido", abaixo do campo CPF
+E o usuário não deve ser redirecionado para o próximo passo
