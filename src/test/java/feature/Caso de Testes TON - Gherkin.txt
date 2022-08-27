@@ -1,3 +1,5 @@
+Funcionalidade: APP TON
+
 Cenário: Realizar cadastro de uma conta Pessoa Física
 Dado que o usuário esteja na tela inicial do aplicativo
 Quando clicar em "Criar Conta"
